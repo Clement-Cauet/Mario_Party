@@ -31,6 +31,7 @@ public slots:
 	void jetDeMultiple();
 	void resetDeMultiple();
 	void afficheTabDe(int nbr);
+	void afficheScoreTab();
 
 private:
     Ui::Mario_PartyClass ui;

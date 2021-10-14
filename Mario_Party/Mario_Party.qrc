@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="Mario_Party">
-    </qresource>
+  <qresource prefix="Mario_Party">
+    <file>mario.png</file>
+  </qresource>
 </RCC>

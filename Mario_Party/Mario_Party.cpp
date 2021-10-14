@@ -4,8 +4,8 @@ Mario_Party::Mario_Party(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
-	De de;
-	DeHisto dehisto;
+	de = new De();
+	dehisto = new DeHisto();
 
 	/* Barre de menu */
 	// Onglet Fichier
@@ -21,21 +21,24 @@ Mario_Party::Mario_Party(QWidget *parent)
 	menuChoisir->addAction(actionD_Histo);
 
 	setLayout(false);
-	ui.error->setVisible(false);
+	ui.error1->setVisible(false);
+	ui.error2->setVisible(false);
 
 	QObject::connect(actionQuitter, SIGNAL(triggered()), this, SLOT(close()));
 	QObject::connect(actionD, SIGNAL(triggered()), this, SLOT(layoutDe()));
 	QObject::connect(actionD_Histo, SIGNAL(triggered()), this, SLOT(layoutDeHisto()));
+
 	resetDeUnique();
+	resetDeMultiple();
 }
 
 void Mario_Party::setLayout(bool visible) {
-	if (visible == true) {
-		//ui.layoutD->setVisible(true);
-		//ui.layoutD_Histo->setVisible(false);
+	if (visible == false) {
+		ui.layoutD->setVisible(true);
+		ui.layoutD_Histo->setVisible(false);
 	}else{
-		//ui.layoutD->setVisible(false);
-		//ui.layoutD_Histo->setVisible(true);
+		ui.layoutD->setVisible(false);
+		ui.layoutD_Histo->setVisible(true);
 	}
 }
 
@@ -80,13 +83,18 @@ void Mario_Party::jetDeMultiple() {
 		QString str = ui.lineEdit->text();
 		int nbr = str.toInt();
 		if (nbr <= 0 || nbr > 7) {
-			ui.error->setVisible(true);
+			ui.error1->setVisible(true);
+			ui.error2->setVisible(false);
 		}
 		else {
-			ui.error->setVisible(false);
+			ui.error1->setVisible(false);
+			ui.error2->setVisible(false);
 			dehisto->jet(nbr);
 			afficheTabDe(nbr);
 		}
+	} else {
+		ui.error2->setVisible(true);
+		ui.error1->setVisible(false);
 	}
 }
 
@@ -105,9 +113,20 @@ void Mario_Party::afficheTabDe(int nbr) {
 			ui.tableWidget->setItem(i, j, data);
 		}
 	}
+	afficheScoreTab();
+}
+
+void Mario_Party::afficheScoreTab() {
+	int scoreTab = dehisto->getScoreTab();
+	QString str = "";
+	str = QString::number(scoreTab);
+	ui.score_2->setText(str);
 }
 
 void Mario_Party::resetDeMultiple() {
+	dehisto->resetTab();
+	afficheScoreTab();
 	ui.tableWidget->setRowCount(0);
 	ui.tableWidget->setColumnCount(0);
+	ui.lineEdit->text() = "";
 }
