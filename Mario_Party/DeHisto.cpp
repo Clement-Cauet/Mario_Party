@@ -10,9 +10,13 @@ void DeHisto::jet(){
 	this->getValueDe();
 }
 
-void DeHisto::jet(int n){
-	for (int i = 0; i < n; i++){
-		this->lancerDe();
-		tab[i] = this->getValueDe();
+void DeHisto::jet(int nbr){
+	for (int i = 0; i < nbr; i++){
+		de->lancerDe();
+		this->tab[i] = this->getValueDe();
 	}
+}
+
+int DeHisto::getValueTab(int nbr) {
+	return this->tab[nbr];
 }

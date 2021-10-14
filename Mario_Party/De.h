@@ -12,5 +12,6 @@ public:
 	void resetDe();
 
 private:
-	int valueDe, scoreDe;
+	int valueDe;
+	int scoreDe;
 };

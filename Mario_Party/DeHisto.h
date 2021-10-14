@@ -9,6 +9,6 @@ class DeHisto : public De
 public:
 	DeHisto();
 	void jet();
-	void jet(int n);
-
+	void jet(int nbr);
+	int getValueTab(int nbr);
 };

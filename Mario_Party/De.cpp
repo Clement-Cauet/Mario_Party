@@ -2,10 +2,12 @@
 #include <QRandomGenerator>
 
 De::De(){
-
+	this->scoreDe = 0;
 }
 
 De::De(int nbr){
+	this->valueDe = nbr;
+	this->scoreDe = 0;
 }
 
 int De::getValueDe(){

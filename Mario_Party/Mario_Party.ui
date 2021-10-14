@@ -14,152 +14,112 @@
    <string>Mario_Party</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>681</width>
-      <height>401</height>
+      <width>281</width>
+      <height>261</height>
      </rect>
     </property>
-    <property name="currentIndex">
-     <number>0</number>
+    <layout class="QFormLayout" name="layoutD">
+     <item row="3" column="0">
+      <widget class="QLabel" name="resultTitle">
+       <property name="text">
+        <string>Résultat :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="scoreTitle">
+       <property name="text">
+        <string>Score total :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="resetButton">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="jetDeButton">
+       <property name="text">
+        <string>Lancer le dé</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="score">
+       <property name="text">
+        <string>Le dé n'a pas était lancé</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="result">
+       <property name="text">
+        <string>Le dé n'a pas était lancé</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>10</y>
+      <width>281</width>
+      <height>371</height>
+     </rect>
     </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Tab 1</string>
-     </attribute>
-     <widget class="QLabel" name="score">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>100</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Le dé n'a pas était lancé</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="jetDeButton">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Lancer le dé</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="resultTitle">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>71</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Résultat :</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="result">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>60</y>
-        <width>151</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Le dé n'a pas était lancé</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="resetButton">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>10</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Reset</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="scoreTitle">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>100</y>
-        <width>71</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Score total :</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
-     <widget class="QTableView" name="tableView">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>60</y>
-        <width>131</width>
-        <height>192</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>20</y>
-        <width>47</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Historique</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>110</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Nombre de lancé :</string>
-      </property>
-     </widget>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>110</y>
-        <width>61</width>
-        <height>41</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
+    <layout class="QFormLayout" name="layoutD_Histo">
+     <item row="4" column="0">
+      <widget class="QPushButton" name="reset2Button">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="jetDe2Button">
+       <property name="text">
+        <string>Lancé les dés</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QTableWidget" name="tableWidget"/>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Historique</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Nombre de lancé :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="error">
+       <property name="text">
+        <string>Valeur incorrect</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -171,6 +131,21 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>Fichier</string>
+    </property>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuChoisir">
+    <property name="title">
+     <string>Choisir</string>
+    </property>
+    <addaction name="actionD"/>
+    <addaction name="actionD_Histo"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuChoisir"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -181,6 +156,21 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionD">
+   <property name="text">
+    <string>Dé</string>
+   </property>
+  </action>
+  <action name="actionD_Histo">
+   <property name="text">
+    <string>DéHisto</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
@@ -195,6 +185,38 @@
    <hints>
     <hint type="sourcelabel">
      <x>57</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>jetDe2Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Mario_PartyClass</receiver>
+   <slot>jetDeMultiple()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>reset2Button</sender>
+   <signal>clicked()</signal>
+   <receiver>Mario_PartyClass</receiver>
+   <slot>resetDeMultiple()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
      <y>90</y>
     </hint>
     <hint type="destinationlabel">
@@ -219,9 +241,61 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionQuitter</sender>
+   <signal>triggered()</signal>
+   <receiver>Mario_PartyClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionD</sender>
+   <signal>triggered()</signal>
+   <receiver>Mario_PartyClass</receiver>
+   <slot>layoutDe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionD_Histo</sender>
+   <signal>triggered()</signal>
+   <receiver>Mario_PartyClass</receiver>
+   <slot>layoutDeHisto()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>234</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>jetDeUnique()</slot>
   <slot>resetDeUnique()</slot>
+  <slot>jetDeMultiple()</slot>
+  <slot>resetDeMultiple()</slot>
+  <slot>layoutDe()</slot>
+  <slot>layoutDeHisto()</slot>
  </slots>
 </ui>

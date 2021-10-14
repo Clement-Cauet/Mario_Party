@@ -89,11 +89,13 @@
     <QtUic Include="Mario_Party.ui" />
     <QtMoc Include="Mario_Party.h" />
     <ClCompile Include="De.cpp" />
+    <ClCompile Include="DeHisto.cpp" />
     <ClCompile Include="Mario_Party.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="De.h" />
+    <ClInclude Include="DeHisto.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
